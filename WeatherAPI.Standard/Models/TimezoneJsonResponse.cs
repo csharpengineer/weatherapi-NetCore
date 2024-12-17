@@ -21,148 +21,22 @@ namespace WeatherAPI.Standard.Models
     public class TimezoneJsonResponse : BaseModel 
     {
         // These fields hold the values for the public properties.
-        private string name;
-        private string region;
-        private string country;
-        private double? lat;
-        private double? lon;
-        private string tzId;
-        private int? localtimeEpoch;
-        private string localtime;
+        private Models.Location location;
 
         /// <summary>
-        /// Local area name.
+        /// TODO: Write general description for this method
         /// </summary>
-        [JsonProperty("name")]
-        public string Name 
+        [JsonProperty("location")]
+        public Models.Location Location 
         { 
             get 
             {
-                return this.name; 
+                return this.location; 
             } 
             set 
             {
-                this.name = value;
-                onPropertyChanged("Name");
-            }
-        }
-
-        /// <summary>
-        /// Local area region.
-        /// </summary>
-        [JsonProperty("region")]
-        public string Region 
-        { 
-            get 
-            {
-                return this.region; 
-            } 
-            set 
-            {
-                this.region = value;
-                onPropertyChanged("Region");
-            }
-        }
-
-        /// <summary>
-        /// Country
-        /// </summary>
-        [JsonProperty("country")]
-        public string Country 
-        { 
-            get 
-            {
-                return this.country; 
-            } 
-            set 
-            {
-                this.country = value;
-                onPropertyChanged("Country");
-            }
-        }
-
-        /// <summary>
-        /// Area latitude
-        /// </summary>
-        [JsonProperty("lat")]
-        public double? Lat 
-        { 
-            get 
-            {
-                return this.lat; 
-            } 
-            set 
-            {
-                this.lat = value;
-                onPropertyChanged("Lat");
-            }
-        }
-
-        /// <summary>
-        /// Area longitude
-        /// </summary>
-        [JsonProperty("lon")]
-        public double? Lon 
-        { 
-            get 
-            {
-                return this.lon; 
-            } 
-            set 
-            {
-                this.lon = value;
-                onPropertyChanged("Lon");
-            }
-        }
-
-        /// <summary>
-        /// Time zone
-        /// </summary>
-        [JsonProperty("tz_id")]
-        public string TzId 
-        { 
-            get 
-            {
-                return this.tzId; 
-            } 
-            set 
-            {
-                this.tzId = value;
-                onPropertyChanged("TzId");
-            }
-        }
-
-        /// <summary>
-        /// Local date and time in unix time
-        /// </summary>
-        [JsonProperty("localtime_epoch")]
-        public int? LocaltimeEpoch 
-        { 
-            get 
-            {
-                return this.localtimeEpoch; 
-            } 
-            set 
-            {
-                this.localtimeEpoch = value;
-                onPropertyChanged("LocaltimeEpoch");
-            }
-        }
-
-        /// <summary>
-        /// Local date and time
-        /// </summary>
-        [JsonProperty("localtime")]
-        public string Localtime 
-        { 
-            get 
-            {
-                return this.localtime; 
-            } 
-            set 
-            {
-                this.localtime = value;
-                onPropertyChanged("Localtime");
+                this.location = value;
+                onPropertyChanged("Location");
             }
         }
     }
